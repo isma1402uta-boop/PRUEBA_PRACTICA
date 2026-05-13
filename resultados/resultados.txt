@@ -1,0 +1,560 @@
+========================================
+Estudiante: ACOSTA SOLIS HANNA AIDE
+Fecha y Hora: 2026-05-13 08:27:13
+Entorno / Lenguaje: JAVA
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 5,80
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 2,00
+    - Asignaturas Aprobadas: 2
+    - Asignaturas Reprobadas: 3
+========================================
+
+========================================
+Estudiante: ANDRADE SANCHEZ HUGO ALEXANDER
+Fecha y Hora: 2026-05-13 08:27:53
+Entorno / Lenguaje: C++
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 7,50
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 3,00
+    - Asignaturas Aprobadas: 4
+    - Asignaturas Reprobadas: 1
+========================================
+
+========================================
+Estudiante: ATIENCIA CHERRES JOSUE ALEXANDER
+Fecha y Hora: 2026-05-13 08:28:32
+Entorno / Lenguaje: C++
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 7,80
+    - Nota Mas Alta: 9,00
+    - Nota Mas Baja: 7,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: ATIENCIA CHERRES JOSUE ALEXANDER
+Fecha y Hora: 2026-05-13 08:29:30
+Entorno / Lenguaje: C++
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 5,20
+    - Nota Mas Alta: 9,00
+    - Nota Mas Baja: 2,00
+    - Asignaturas Aprobadas: 2
+    - Asignaturas Reprobadas: 3
+========================================
+
+========================================
+Estudiante: BALAREZO PEREZ DIEGO SEBASTIAN
+Fecha y Hora: 2026-05-13 08:30:09
+Entorno / Lenguaje: C++
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 7,80
+    - Nota Mas Alta: 9,00
+    - Nota Mas Baja: 7,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: BARRIONUEVO MONTESDEOCA JOB GABRIEL
+Fecha y Hora: 2026-05-13 08:30:37
+Entorno / Lenguaje: C++
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 8,00
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 6,00
+    - Asignaturas Aprobadas: 4
+    - Asignaturas Reprobadas: 1
+========================================
+
+========================================
+Estudiante: BEDOYA MAZO JUAN MANUEL
+Fecha y Hora: 2026-05-13 08:31:13
+Entorno / Lenguaje: Java
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 8,60
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 8,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: BRAVO LOPEZ JORDAN SAMUEL
+Fecha y Hora: 2026-05-13 08:31:50
+Entorno / Lenguaje: C++
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 6,80
+    - Nota Mas Alta: 9,00
+    - Nota Mas Baja: 4,00
+    - Asignaturas Aprobadas: 3
+    - Asignaturas Reprobadas: 2
+========================================
+
+========================================
+Estudiante: CAJIAO VALDIVIESO PAULO ALESSANDRO
+Fecha y Hora: 2026-05-13 08:32:22
+Entorno / Lenguaje: C
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 7,00
+    - Nota Mas Alta: 9,00
+    - Nota Mas Baja: 4,00
+    - Asignaturas Aprobadas: 4
+    - Asignaturas Reprobadas: 1
+========================================
+
+========================================
+Estudiante: CALVOPIÑA HERRERA BRANDON ISRAEL
+Fecha y Hora: 2026-05-13 08:32:54
+Entorno / Lenguaje: C
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 5,60
+    - Nota Mas Alta: 8,00
+    - Nota Mas Baja: 3,00
+    - Asignaturas Aprobadas: 2
+    - Asignaturas Reprobadas: 3
+========================================
+
+========================================
+Estudiante: CASTELO BERRONES KATHERINE NICOL
+Fecha y Hora: 2026-05-13 08:33:27
+Entorno / Lenguaje: C
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 7,20
+    - Nota Mas Alta: 9,00
+    - Nota Mas Baja: 4,00
+    - Asignaturas Aprobadas: 4
+    - Asignaturas Reprobadas: 1
+========================================
+
+========================================
+Estudiante: CHACHA CHANGO VICTOR MANUEL
+Fecha y Hora: 2026-05-13 08:34:21
+Entorno / Lenguaje: C
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 7,40
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 2,00
+    - Asignaturas Aprobadas: 4
+    - Asignaturas Reprobadas: 1
+========================================
+
+========================================
+Estudiante: CHILUIZA QUISHPE DIEGO STEED
+Fecha y Hora: 2026-05-13 08:34:49
+Entorno / Lenguaje: C
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 9,40
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 8,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: DOMINGUEZ LESCANO DANIEL SEBASTIAN
+Fecha y Hora: 2026-05-13 08:35:15
+Entorno / Lenguaje: C
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 10,00
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 10,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: FREIRE AREBALO ALAN ANDERSON
+Fecha y Hora: 2026-05-13 08:35:49
+Entorno / Lenguaje: C++
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 8,40
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 7,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: GUALLE AUCANSHALA ABISAG LISENIA
+Fecha y Hora: 2026-05-13 08:36:22
+Entorno / Lenguaje: C++
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 8,80
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 8,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: GUAMAN CHANAHUANO HAMILTON ALEXANDER
+Fecha y Hora: 2026-05-13 08:37:00
+Entorno / Lenguaje: C
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 8,40
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 7,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: GUANGA ALTAMIRANO EDWIN SEBASTIAN
+Fecha y Hora: 2026-05-13 08:37:34
+Entorno / Lenguaje: C
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 8,20
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 6,00
+    - Asignaturas Aprobadas: 4
+    - Asignaturas Reprobadas: 1
+========================================
+
+========================================
+Estudiante: GUANOTOA ESCOBAR KARLA LEONELA
+Fecha y Hora: 2026-05-13 08:38:20
+Entorno / Lenguaje: JAVA
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 9,60
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 9,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: LANDETA TAPIA EDISON PAUL
+Fecha y Hora: 2026-05-13 08:38:48
+Entorno / Lenguaje: C
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 10,00
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 10,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: LARA BALSECA KAREN ARACELY
+Fecha y Hora: 2026-05-13 08:39:22
+Entorno / Lenguaje: C++
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 0,00
+    - Nota Mas Alta: 0,00
+    - Nota Mas Baja: 0,00
+    - Asignaturas Aprobadas: 0
+    - Asignaturas Reprobadas: 5
+========================================
+
+========================================
+Estudiante: LOOR VELEZ JHON ALEJANDRO
+Fecha y Hora: 2026-05-13 08:39:47
+Entorno / Lenguaje: C
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 7,20
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 5,00
+    - Asignaturas Aprobadas: 3
+    - Asignaturas Reprobadas: 2
+========================================
+
+========================================
+Estudiante: LOPEZ SANCHEZ WASHINGTON STEVEN
+Fecha y Hora: 2026-05-13 08:40:29
+Entorno / Lenguaje: C++
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 10,00
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 10,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: MIRANDA GARCES ALAN IMANOL
+Fecha y Hora: 2026-05-13 08:41:00
+Entorno / Lenguaje: C
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 0,00
+    - Nota Mas Alta: 0,00
+    - Nota Mas Baja: 0,00
+    - Asignaturas Aprobadas: 0
+    - Asignaturas Reprobadas: 5
+========================================
+
+========================================
+Estudiante: MONAR PARCO JHAIR ALEXANDER
+Fecha y Hora: 2026-05-13 08:41:31
+Entorno / Lenguaje: C++
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 10,00
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 10,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: MUYULEMA MOYOLEMA MATEO ALEXANDER
+Fecha y Hora: 2026-05-13 08:42:04
+Entorno / Lenguaje: Java
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 7,60
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 6,00
+    - Asignaturas Aprobadas: 3
+    - Asignaturas Reprobadas: 2
+========================================
+
+========================================
+Estudiante: NARVAEZ GAVILANES ANTONELLA NICOLE
+Fecha y Hora: 2026-05-13 08:42:34
+Entorno / Lenguaje: C
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 10,00
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 10,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: NUÑEZ ESPIN BRYAN SEBASTIAN
+Fecha y Hora: 2026-05-13 08:42:56
+Entorno / Lenguaje: C++
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 9,00
+    - Nota Mas Alta: 9,00
+    - Nota Mas Baja: 9,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: PILCO FLORES MARIO DAVID
+Fecha y Hora: 2026-05-13 08:43:14
+Entorno / Lenguaje: C
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 8,00
+    - Nota Mas Alta: 8,00
+    - Nota Mas Baja: 8,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: POMAQUERO CHANGO KATHERINE SOLEDAD
+Fecha y Hora: 2026-05-13 08:43:33
+Entorno / Lenguaje: C
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 8,20
+    - Nota Mas Alta: 9,00
+    - Nota Mas Baja: 7,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: QUEVEDO AJON GINA ANAHI
+Fecha y Hora: 2026-05-13 08:43:55
+Entorno / Lenguaje: C
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 10,00
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 10,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: RIVADENEYRA ULLOA MATIAS SEBASTIAN
+Fecha y Hora: 2026-05-13 08:44:22
+Entorno / Lenguaje: C++
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 10,00
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 10,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: ROCHA ROCHA CAROLINA ESTEFANIA
+Fecha y Hora: 2026-05-13 08:44:53
+Entorno / Lenguaje: C
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 9,20
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 9,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: SANCHEZ LEMA ISAAC ADRIAN
+Fecha y Hora: 2026-05-13 08:45:30
+Entorno / Lenguaje: Java
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 9,00
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 8,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: SEGOVIA GARCIA JOSEPH ANDRE
+Fecha y Hora: 2026-05-13 08:45:55
+Entorno / Lenguaje: C++
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 9,00
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 7,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: SUPE GARCES JOAN SEBASTIAN
+Fecha y Hora: 2026-05-13 08:46:18
+Entorno / Lenguaje: C
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 7,94
+    - Nota Mas Alta: 9,00
+    - Nota Mas Baja: 7,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: TOAPANTA IZA KIAM MATIAS
+Fecha y Hora: 2026-05-13 08:46:46
+Entorno / Lenguaje: C++
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 10,00
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 10,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: VERDESOTO AZOGUE KEVIN ALEXANDER
+Fecha y Hora: 2026-05-13 08:47:11
+Entorno / Lenguaje: C
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 8,20
+    - Nota Mas Alta: 9,00
+    - Nota Mas Baja: 7,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
+========================================
+Estudiante: VILLACRES TOALOMBO JOSUE ALEJANDRO
+Fecha y Hora: 2026-05-13 08:47:40
+Entorno / Lenguaje: Java
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 7,80
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 0,00
+    - Asignaturas Aprobadas: 4
+    - Asignaturas Reprobadas: 1
+========================================
+
+========================================
+Estudiante: VITERI CAMINO MAYDELIN SHANTAL
+Fecha y Hora: 2026-05-13 08:48:05
+Entorno / Lenguaje: C++
+----------------------------------------
+DETALLE DE RESULTADOS:
+> PROCESAMIENTO DE NOTAS:
+    - Promedio General: 10,00
+    - Nota Mas Alta: 10,00
+    - Nota Mas Baja: 10,00
+    - Asignaturas Aprobadas: 5
+    - Asignaturas Reprobadas: 0
+========================================
+
