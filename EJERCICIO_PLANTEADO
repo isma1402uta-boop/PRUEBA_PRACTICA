@@ -1,0 +1,342 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
+/**
+ * Aplicativo Interactivo de Logica y Algoritmos en Java.
+ * Asignatura: Algoritmos y Logica de Programacion.
+ * Universidad Tecnica de Ambato.
+ */
+public class AplicativoInteractivo2 {
+
+    // Constante academica para definir el limite minimo de aprobacion
+    private static final double NOTA_MINIMA_APROBACION = 7.0;
+    
+    // Scanner estatico para evitar redundancia de paso de parametros
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int opcion;
+
+        // Variables para almacenar resultados intermedios y persistencia
+        String nombreEstudiante = "";
+        String lenguajeUtilizado = "";
+        StringBuilder resultadosAcumulados = new StringBuilder();
+        boolean datosProcesados = false;
+        boolean estudianteConfigurado = false;
+
+        // Parte 1: Menu interactivo continuo
+        do {
+            System.out.println("\n========================================");
+            System.out.println("   APLICATIVO INTERACTIVO DE LOGICA     ");
+            System.out.println("========================================");
+            
+            // Muestra informacion del estudiante activo en el menu si ya existe uno
+            if (estudianteConfigurado) {
+                System.out.println(" Estudiante activo: " + nombreEstudiante + " [" + lenguajeUtilizado + "]");
+                System.out.println("----------------------------------------");
+            }
+            
+            System.out.println("1. Registrar / Cambiar estudiante");
+            System.out.println("2. Operaciones basicas");
+            System.out.println("3. Registro de notas");
+            System.out.println("4. Guardar resultados en archivo");
+            System.out.println("5. Salir");
+            System.out.println("========================================");
+            
+            opcion = leerEnteroValido("Seleccione una opcion: ", 1, 5);
+
+            switch (opcion) {
+                case 1:
+                    // Validacion de seguridad: Evita perder datos no guardados del estudiante anterior
+                    if (datosProcesados) {
+                        System.out.println("Aviso: Existen datos procesados del estudiante actual que no se han guardado.");
+                        System.out.print("¿Desea continuar y borrar estos datos? (1: Si / 2: No): ");
+                        int confirmar = leerEnteroValido("", 1, 2);
+                        if (confirmar == 2) {
+                            System.out.println("Operacion cancelada. Guarde los resultados primero.");
+                            break;
+                        }
+                    }
+
+                    System.out.println("\n=== CONFIGURACION DEL ESTUDIANTE ===");
+                    nombreEstudiante = leerNombreValido();
+                    lenguajeUtilizado = leerLenguajeValido();
+                    resultadosAcumulados.setLength(0); // Limpia datos del estudiante anterior de manera segura
+                    datosProcesados = false;
+                    estudianteConfigurado = true;
+                    System.out.println("Exito: Estudiante configurado correctamente.");
+                    break;
+
+                case 2:
+                    if (!estudianteConfigurado) {
+                        System.out.println("Aviso: Debe registrar un estudiante en la opcion 1 antes de operar.");
+                        break;
+                    }
+                    String resultadoOperaciones = ejecutarOperacionesBasicas();
+                    resultadosAcumulados.append(resultadoOperaciones).append("\n");
+                    datosProcesados = true;
+                    break;
+
+                case 3:
+                    if (!estudianteConfigurado) {
+                        System.out.println("Aviso: Debe registrar un estudiante en la opcion 1 antes de operar.");
+                        break;
+                    }
+                    String resultadoNotas = ejecutarRegistroNotas();
+                    resultadosAcumulados.append(resultadoNotas).append("\n");
+                    datosProcesados = true;
+                    break;
+
+                case 4:
+                    if (!estudianteConfigurado) {
+                        System.out.println("Aviso: No hay ningun estudiante activo registrado.");
+                    } else if (datosProcesados) {
+                        guardarResultados(nombreEstudiante, lenguajeUtilizado, resultadosAcumulados.toString().trim());
+                        // Limpieza de estados tras persistencia exitosa para el siguiente calculo
+                        resultadosAcumulados.setLength(0);
+                        datosProcesados = false;
+                    } else {
+                        System.out.println("Aviso: No existen nuevos datos procesados para guardar o ya fueron guardados.");
+                    }
+                    break;
+
+                case 5:
+                    // Alerta si el usuario intenta salir con calculos pendientes sin almacenar
+                    if (datosProcesados) {
+                        System.out.println("Aviso: Hay datos sin guardar.");
+                        System.out.print("¿Esta seguro de que desea salir? (1: Si / 2: No): ");
+                        int confirmarSalir = leerEnteroValido("", 1, 2);
+                        if (confirmarSalir == 2) {
+                            opcion = 0; // Cambia el estado de la opcion para no romper el bucle
+                            break;
+                        }
+                    }
+                    System.out.println("Saliendo del aplicativo. Hasta luego");
+                    break;
+
+                default:
+                    System.out.println("Opcion no valida. Intente nuevamente.");
+            }
+        } while (opcion != 5);
+
+        scanner.close();
+    }
+
+    // Parte 2: Operaciones matemáticas
+    private static String ejecutarOperacionesBasicas() {
+        System.out.println("\n--- Operaciones Basicas ---");
+        
+        double num1 = leerDoubleValido("Ingrese el primer numero: ");
+        double num2 = leerDoubleValido("Ingrese el segundo numero: ");
+
+        double suma = num1 + num2;
+        double resta = num1 - num2;
+        double multiplicacion = num1 * num2;
+        
+        String divisionStr;
+        if (num2 != 0) {
+            double division = num1 / num2;
+            divisionStr = String.format("%.2f", division);
+        } else {
+            divisionStr = "Error: Division para cero no permitida.";
+        }
+
+        System.out.println("\n--- Resultados de las Operaciones ---");
+        System.out.printf("Suma: %.2f\n", suma);
+        System.out.printf("Resta: %.2f\n", resta);
+        System.out.printf("Multiplicacion: %.2f\n", multiplicacion);
+        System.out.println("Division: " + divisionStr);
+
+        return String.format("  > OPERACIONES MATEMATICAS:\n" +
+                             "    - Numeros ingresados: %.2f y %.2f\n" +
+                             "    - Suma: %.2f\n" +
+                             "    - Resta: %.2f\n" +
+                             "    - Multiplicacion: %.2f\n" +
+                             "    - Division: %s\n", 
+                             num1, num2, suma, resta, multiplicacion, divisionStr);
+    }
+
+    // Parte 3: Arreglos y procesamiento de notas
+    private static String ejecutarRegistroNotas() {
+        System.out.println("\n--- Registro de 5 Notas ---");
+        double[] notas = new double[5];
+        double sumaNotas = 0;
+        int aprobados = 0;
+        int reprobados = 0;
+
+        for (int i = 0; i < notas.length; i++) {
+            notas[i] = leerNotaValida("Ingrese la nota de la asignatura " + (i + 1) + " (0 - 10): ", 0.0, 10.0);
+        }
+
+        double notaMayor = notas[0];
+        double notaMenor = notas[0];
+
+        for (int i = 0; i < notas.length; i++) {
+            double notaActual = notas[i];
+            sumaNotas += notaActual;
+
+            if (notaActual > notaMayor) {
+                notaMayor = notaActual;
+            }
+            if (notaActual < notaMenor) {
+                notaMenor = notaActual;
+            }
+
+            // Uso adaptativo de la constante de evaluacion
+            if (notaActual >= NOTA_MINIMA_APROBACION) {
+                aprobados++;
+            } else {
+                reprobados++;
+            }
+        }
+
+        double promedio = sumaNotas / notas.length;
+
+        System.out.println("\n--- Resultados del Procesamiento ---");
+        System.out.printf("Promedio: %.2f\n", promedio);
+        System.out.printf("Nota Mayor: %.2f\n", notaMayor);
+        System.out.printf("Nota Menor: %.2f\n", notaMenor);
+        System.out.println("Cantidad de Asignaturas Aprobadas: " + aprobados);
+        System.out.println("Cantidad de Asignaturas Reprobadas: " + reprobados);
+
+        // CORREGIDO: Se cambia 'Estudiantes' por 'Asignaturas' para ser consistente con la logica
+        return String.format("  > PROCESAMIENTO DE NOTAS:\n" +
+                             "    - Promedio General: %.2f\n" +
+                             "    - Nota Mas Alta: %.2f\n" +
+                             "    - Nota Mas Baja: %.2f\n" +
+                             "    - Asignaturas Aprobadas: %d\n" +
+                             "    - Asignaturas Reprobadas: %d\n", 
+                             promedio, notaMayor, notaMenor, aprobados, reprobados);
+    }
+
+    // Parte 4: Persistencia en archivos
+    private static void guardarResultados(String nombre, String lenguaje, String resultados) {
+        String carpetaDestino = "resultados";
+        String rutaArchivo = carpetaDestino + "/resultados.txt";
+        
+        LocalDateTime fechaHoraActual = LocalDateTime.now();
+        DateTimeFormatter formateador = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String fechaFormateada = fechaHoraActual.format(formateador);
+
+        File directorio = new File(carpetaDestino);
+        if (!directorio.exists()) {
+            directorio.mkdirs();
+        }
+
+        try (PrintWriter writer = new PrintWriter(new FileWriter(rutaArchivo, true))) {
+            writer.println("========================================");
+            writer.println("Estudiante: " + nombre);
+            writer.println("Fecha y Hora: " + fechaFormateada);
+            writer.println("Entorno / Lenguaje: " + lenguaje);
+            writer.println("----------------------------------------");
+            writer.println("DETALLE DE RESULTADOS:");
+            writer.println(resultados);
+            writer.println("========================================\n");
+            
+            System.out.println("Exito: Datos persistidos correctamente en '" + rutaArchivo + "'.");
+        } catch (IOException e) {
+            System.out.println("Error Critico de I/O: No se pudo escribir en el archivo: " + e.getMessage());
+        }
+    }
+
+    // =========================================================================
+    // METODOS DE VALIDACION OPTIMIZADOS (SIN TILDES EN LOS MENSAJES)
+    // =========================================================================
+
+    private static String leerNombreValido() {
+        String entrada;
+        while (true) {
+            System.out.print("Ingrese el nombre del estudiante: ");
+            entrada = scanner.nextLine().trim();
+
+            if (entrada.isEmpty()) {
+                System.out.println("Error: El campo del nombre no puede estar vacio.");
+            } else if (!entrada.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")) { 
+                System.out.println("Error: El nombre debe contener unicamente letras y espacios.");
+            } else {
+                return entrada;
+            }
+        }
+    }
+
+    private static String leerLenguajeValido() {
+        String entrada;
+        while (true) {
+            System.out.print("Ingrese el lenguaje de programacion utilizado actualmente (ej. Java / C++): ");
+            entrada = scanner.nextLine().trim();
+
+            if (entrada.isEmpty()) {
+                System.out.println("Error: El campo del lenguaje no puede estar vacio.");
+            } else {
+                return entrada;
+            }
+        }
+    }
+
+    private static int leerEnteroValido(String mensaje, int min, int max) {
+        int valor;
+        while (true) {
+            System.out.print(mensaje);
+            String entrada = scanner.nextLine().trim();
+            try {
+                if (entrada.isEmpty()) {
+                    System.out.println("Error: El campo no puede estar vacio.");
+                    continue;
+                }
+                valor = Integer.parseInt(entrada);
+                if (valor >= min && valor <= max) {
+                    return valor;
+                } else {
+                    System.out.println("Error: Opcion fuera de rango (" + min + " - " + max + ").");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Error: Tipo de dato no valido. Ingrese un numero entero.");
+            }
+        }
+    }
+
+    private static double leerDoubleValido(String mensaje) {
+        double valor;
+        while (true) {
+            System.out.print(mensaje);
+            String entrada = scanner.nextLine().trim().replace(',', '.');
+            try {
+                if (entrada.isEmpty()) {
+                    System.out.println("Error: El campo no puede estar vacio.");
+                    continue;
+                }
+                valor = Double.parseDouble(entrada);
+                return valor;
+            } catch (NumberFormatException e) {
+                System.out.println("Error: Formato numerico incorrecto. Ingrese un valor decimal o entero.");
+            }
+        }
+    }
+
+    private static double leerNotaValida(String mensaje, double min, double max) {
+        double valor;
+        while (true) {
+            System.out.print(mensaje);
+            String entrada = scanner.nextLine().trim().replace(',', '.');
+            try {
+                if (entrada.isEmpty()) {
+                    System.out.println("Error: El campo no puede estar vacio.");
+                    continue;
+                }
+                valor = Double.parseDouble(entrada);
+                if (valor >= min && valor <= max) {
+                    return valor;
+                } else {
+                    System.out.println("Error: Escala de evaluacion fuera de rango (" + min + " - " + max + ").");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Error: Formato de nota incorrecto. Ingrese un decimal.");
+            }
+        }
+    }
+}
