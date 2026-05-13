@@ -1,0 +1,266 @@
+# 🚀 Aplicativo Interactivo de Lógica y Registro de Calificaciones
+
+Este repositorio contiene la implementación en pseudocódigo de un **Sistema Interactivo de Lógica, Procesamiento Aritmético y Gestión de Calificaciones** desarrollado en **PSeInt**. El sistema simula un entorno operativo real, garantizando la robustez mediante la validación cíclica de datos y control de flujo dinámico.
+
+---
+
+## 📋 Características del Sistema
+
+El aplicativo está diseñado bajo un enfoque modular y continuo, estructurado en las siguientes secciones principales:
+
+1. **Configuración Inicial del Perfil:** Captura obligatoria y validación del nombre del estudiante y el entorno de desarrollo activo.
+2. **Módulo de Operaciones Básicas:** Cálculo numérico de suma, resta, multiplicación y división, incluyendo un mecanismo condicional de mitigación para evitar la división por cero.
+3. **Módulo de Registro de Notas:** Inicialización exacta y procesamiento descriptivo de un vector (arreglo unidimensional) de 5 calificaciones, calculando el promedio general, valores extremos (máximo y mínimo) y la clasificación académica.
+4. **Persistencia Dinámica Histórica:** Simulación del almacenamiento acumulativo de los reportes generados en memoria dentro de un archivo de texto plano (`resultados.txt`), controlando cambios pendientes mediante banderas lógicas (*flags*).
+
+---
+
+## 🛠️ Requisitos del Entorno
+
+Para ejecutar este proyecto de manera óptima, asegúrese de contar con los siguientes recursos:
+
+* **Software:** [PSeInt](https://pseint.sourceforge.net/) (Compatible con perfiles Flexibles y Estrictos).
+* **Hardware de Desarrollo:** Computador portátil HP Victus / Arquitectura x64.
+* **Configuración de Idioma:** Español latinoamericano.
+
+---
+
+## 💻 Código Fuente en PSeInt
+
+Para utilizar el código en su entorno local, cree un nuevo archivo en PSeInt, configure el perfil en modo **Flexible** y pegue el siguiente pseudocódigo:
+
+```pseint
+Algoritmo AplicativoInteractivo2
+	// Constante academica para definir el limite minimo de aprobacion
+	Definir NOTA_MINIMA_APROBACION Como Real
+	NOTA_MINIMA_APROBACION <- 7.0
+	
+	// Variables globales de control y datos
+	Definir opcion Como Entero
+	Definir nombreEstudiante, lenguajeUtilizado Como Cadena
+	Definir datosProcesados Como Logico
+	Definir confirmarSalir Como Entero
+	
+	// Variables para almacenar los resultados del sistema
+	Definir num1, num2, suma, resta, multiplicacion, division, promedio, notaMayor, notaMenor Como Real
+	Definir aprobados, reprobados Como Entero
+	Definir banderaOperaciones, banderaNotas Como Logico
+	Definir divisionCero Como Logico
+	
+	// Arreglo unidimensional para las calificaciones
+	Definir notas Como Real
+	Dimension notas[5]
+	
+	// Inicializacion de estados
+	datosProcesados <- Falso
+	banderaOperaciones <- Falso
+	banderaNotas <- Falso
+	divisionCero <- Falso
+	
+	Escribir "========================================"
+	Escribir "   CONFIGURACION INICIAL DEL SISTEMA    "
+	Escribir "========================================"
+	
+	// Validacion de Nombre
+	Repetir
+		Escribir "Ingrese el nombre del estudiante: "
+		Leer nombreEstudiante
+		Si nombreEstudiante = "" Entonces
+			Escribir "Error: El campo del nombre no puede estar vacio."
+		FinSi
+	Hasta Que nombreEstudiante <> ""
+	
+	// Validacion de Lenguaje
+	Repetir
+		Escribir "Ingrese el lenguaje de programacion (ej. Java): "
+		Leer lenguajeUtilizado
+		Si lenguajeUtilizado = "" Entonces
+			Escribir "Error: El campo del lenguaje no puede estar vacio."
+		FinSi
+	Hasta Que lenguajeUtilizado <> ""
+	
+	Escribir "Sistema inicializado correctamente."
+	Escribir ""
+	
+	// Menu interactivo continuo
+	Repetir
+		Escribir "========================================"
+		Escribir "   APLICATIVO INTERACTIVO DE LOGICA     "
+		Escribir "========================================"
+		Escribir " Estudiante activo: ", nombreEstudiante, " [", lenguajeUtilizado, "]"
+		Escribir "----------------------------------------"
+		Escribir "1. Operaciones basicas"
+		Escribir "2. Registro de notas"
+		Escribir "3. Guardar resultados"
+		Escribir "4. Salir"
+		Escribir "========================================"
+		
+		// Validacion de la opcion del menu
+		Repetir
+			Escribir "Seleccione una opcion (1 - 4): "
+			Leer opcion
+			Si opcion < 1 O opcion > 4 Entonces
+				Escribir "Error: Opcion fuera de rango."
+			FinSi
+		Hasta Que opcion >= 1 Y opcion <= 4
+		
+		Segun opcion Hacer
+			1:
+				Escribir ""
+				Escribir "--- Módulo de Operaciones Basicas ---"
+				Escribir "Ingrese el primer numero: "
+				Leer num1
+				Escribir "Ingrese el segundo numero: "
+				Leer num2
+				
+				suma <- num1 + num2
+				resta <- num1 - num2
+				multiplicacion <- num1 * num2
+				
+				Si num2 <> 0 Entonces
+					division <- num1 / num2
+					divisionCero <- Falso
+				Sino
+					divisionCero <- Verdadero
+				FinSi
+				
+				Escribir ""
+				Escribir "--- Resultados de las Operaciones ---"
+				Escribir "Suma: ", suma
+				Escribir "Resta: ", resta
+				Escribir "Multiplicacion: ", multiplicacion
+				Si divisionCero = Falso Entonces
+					Escribir "Division: ", division
+				Sino
+					Escribir "Division: Error: Division para cero no permitida."
+				FinSi
+				Escribir ""
+				
+				banderaOperaciones <- Verdadero
+				datosProcesados <- Verdadero
+				
+			2:
+				Definir i Como Entero
+				Definir sumaNotas Como Real
+				
+				Escribir ""
+				Escribir "--- Módulo de Registro de 5 Notas ---"
+				sumaNotas <- 0
+				aprobados <- 0
+				reprobados <- 0
+				
+				// Llenado seguro del vector con validacion de rango
+				Para i <- 1 Hasta 5 Con Paso 1 Hacer
+					Repetir
+						Escribir "Ingrese la nota de la asignatura ", i, " (0 - 10): "
+						Leer notas[i]
+						Si notas[i] < 0.0 O notas[i] > 10.0 Entonces
+							Escribir "Error: Calificacion fuera del rango academico (0 - 10)."
+						FinSi
+					Hasta Que notas[i] >= 0.0 Y notas[i] <= 10.0
+				FinPara
+				
+				// Inicializacion de extremos con el primer valor real ingresado
+				notaMayor <- notas[1]
+				notaMenor <- notas[1]
+				
+				// Procesamiento estadistico descriptivo del vector
+				Para i <- 1 Hasta 5 Con Paso 1 Hacer
+					sumaNotas <- sumaNotas + notas[i]
+					
+					Si notas[i] > notaMayor Entonces
+						notaMayor <- notas[i]
+					FinSi
+					Si notas[i] < notaMenor Entonces
+						notaMenor <- notas[i]
+					FinSi
+					
+					Si notas[i] >= NOTA_MINIMA_APROBACION Entonces
+						aprobados <- aprobados + 1
+					Sino
+						reprobados <- reprobados + 1
+					FinSi
+				FinPara
+				
+				promedio <- sumaNotas / 5
+				
+				Escribir ""
+				Escribir "--- Resultados del Procesamiento ---"
+				Escribir "Promedio General: ", promedio
+				Escribir "Nota Mas Alta: ", notaMayor
+				Escribir "Nota Mas Baja: ", notaMenor
+				Escribir "Asignaturas Aprobadas: ", aprobados
+				Escribir "Asignaturas Reprobadas: ", reprobados
+				Escribir ""
+				
+				banderaNotas <- Verdadero
+				datosProcesados <- Verdadero
+				
+			3:
+				Si datosProcesados Entonces
+					Escribir ""
+					Escribir "[SIMULACION DE PERSISTENCIA EN: resultados/resultados.txt]"
+					Escribir "================================================--"
+					Escribir "Estudiante: ", nombreEstudiante
+					Escribir "Fecha y Hora: [Marcador de Tiempo Local]"
+					Escribir "Entorno / Lenguaje: ", lenguajeUtilizado
+					Escribir "--------------------------------------------------"
+					Escribir "DETALLE DE RESULTADOS ACUMULADOS:"
+					
+					Si banderaOperaciones Entonces
+						Escribir "  > OPERACIONES MATEMATICAS:"
+						Escribir "    - Numeros ingresados: ", num1, " y ", num2
+						Escribir "    - Suma: ", suma
+						Escribir "    - Resta: ", resta
+						Escribir "    - Multiplicacion: ", multiplicacion
+						Si divisionCero = Falso Entonces
+							Escribir "    - Division: ", division
+						Sino
+							Escribir "    - Division: Error: Division para cero no permitida."
+						FinSi
+					FinSi
+					
+					Si banderaNotas Entonces
+						Escribir "  > PROCESAMIENTO DE NOTAS:"
+						Escribir "    - Promedio General: ", promedio
+						Escribir "    - Nota Mas Alta: ", notaMayor
+						Escribir "    - Nota Mas Baja: ", notaMenor
+						Escribir "    - Asignaturas Aprobadas: ", aprobados
+						Escribir "    - Asignaturas Reprobadas: ", reprobados
+					FinSi
+					
+					Escribir "================================================--"
+					Escribir "Exito: Datos guardados de manera local correctamente."
+					Escribir ""
+					
+					// Limpieza de banderas de control tras el almacenamiento exitoso
+					datosProcesados <- Falso
+					banderaOperaciones <- Falso
+					banderaNotas <- Falso
+				Sino
+					Escribir "Aviso: No existen nuevos datos en memoria para guardar."
+					Escribir ""
+				FinSi
+				
+			4:
+				Si datosProcesados Entonces
+					Escribir "Advertencia: Existen modificaciones pendientes sin guardar."
+					Repetir
+						Escribir "¿Desea salir sin guardar los resultados? (1: Si / 2: No): "
+						Leer confirmarSalir
+						Si confirmarSalir < 1 O confirmarSalir > 2 Entonces
+							Escribir "Error: Seleccione 1 o 2."
+						FinSi
+					Hasta Que confirmarSalir = 1 O confirmarSalir = 2
+					
+					Si confirmarSalir = 2 Entonces
+						opcion <- 0 // Restablece la opcion para no romper el bucle principal
+					FinSi
+				FinSi
+				
+				Si opcion = 4 Entonces
+					Escribir "Finalizando el hilo de ejecucion de la aplicacion. Hasta luego."
+				FinSi
+		FinSegun
+	Hasta Que opcion = 4
+FinAlgoritmo
